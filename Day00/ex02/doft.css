@@ -1,0 +1,46 @@
+body {
+	background-color: gray;
+}
+
+#top_bar {
+	position: relative;
+	width: 90%;
+	height: 200px;
+	background:rgb(144, 144, 144);
+	border: 15px solid rgb(144, 144, 144);
+	border-radius: 25px;
+	box-shadow: 15px 15px 15px;
+	margin: auto;
+}
+
+#reload {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 35px;
+}
+
+#close {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 35px;
+}
+
+#loupe {
+	height: 250px;
+	position: absolute;
+	right: 50px;
+	bottom: -50px;
+}
+
+#cluster {
+	transform: translate(0, 30px);
+	margin: auto;
+	border: 15px solid rgb(144, 144, 144);
+	box-shadow: 15px 15px 15px;
+	background: rgb(144, 144, 144);
+	border-radius: 25px;
+	height: 576px;
+	width: 1024px;
+}
