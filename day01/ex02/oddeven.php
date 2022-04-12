@@ -1,11 +1,13 @@
 #!/usr/bin/php
 <?PHP
 
-while (true)
+
+$f = fopen( 'php://stdin', 'r' );
+while ($line = fgets( $f ) && !feof($f))
 {
 	echo "Enter a number: ";
-	$input = rtrim(fgets(STDIN));
-	if ($input == EOT)
+	$f = rtrim(fgets(STDIN));
+	if (feof($input))
 		return;
 	if (!is_numeric($input))
 		print("'$input' is not a number\n");
