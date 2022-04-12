@@ -42,6 +42,12 @@ body {
 	height: 576;
 }
 
+#cluster_image {
+	width: 1024;
+	height: 576;
+	overflow: hidden;
+}
+
 #side_right {
 	transform: translate(0, 25px);
 	box-sizing: border-box;
@@ -161,3 +167,9 @@ p {
 	padding: 10px;
 }
 
+#doft {
+	width: 0px;
+	height: 0px;
+	opacity: 0;
+	visibility: hidden;
+}
