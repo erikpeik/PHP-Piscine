@@ -1,0 +1,85 @@
+.grid-container {
+	display: grid;
+	width: 95.5vw;
+	height: 57.9vw;
+	grid-template-columns: repeat(18, 4.7vw);
+	grid-template-rows: repeat(10, 4.7vw);
+	grid-column-gap: 0.3vw;
+	grid-row-gap: 0.3vw;
+	position: flex;
+	margin: auto;
+	left: center;
+}
+.square-box{
+	position: absolute;
+	width: 4.7vw;
+	height: 4.7vw;
+	overflow: hidden;
+	border: 0.1vw solid black;
+}
+.square-box:hover {
+	border: 0.2vw dotted black;
+	opacity: 0.8;
+	transition: .5s ease;
+}
+.square-content{
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	color: white;
+}
+.square-content div {
+	display: table;
+	width: 100%;
+	height: 100%;
+}
+.element {
+	font-weight: bold;
+	font-size: 2vw;
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;
+	color: white;
+}
+.weight {
+	font-size: 0.8vw;
+	display: table-cell;
+	position: absolute;
+	overflow: hidden;
+	bottom: 1;
+	right: 2;
+	text-align: right;
+	vertical-align: bottom;
+	color: white;
+}
+.number {
+	font-size: 0.8vw;
+	display: table-cell;
+	position: absolute;
+	bottom: 1;
+	left: 2;
+	text-align: left;
+	vertical-align: bottom;
+	color: white;
+}
+.last_ones {
+	position: absolute;
+	width: 4.7vw;
+	height: 4.7vw;
+	overflow: hidden;
+	background: lightblue;
+	border: 0.2vw solid deepskyblue;
+}
+.cropped {
+	width: 100%;
+	height: 20vw;
+	object-fit: cover;
+}
+.copyright {
+	text-align: right;
+	font-style: italic;
+	font-size: 2vw;
+	font-family: monospace;
+}
