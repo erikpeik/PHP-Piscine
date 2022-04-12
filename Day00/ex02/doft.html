@@ -5,7 +5,7 @@
 	</head>
 	<body>
 		<div id="top_bar">
-			<img style="height: 200px" src="resources/day_of_the_42.png">
+			<img style="height: 10vh" src="resources/day_of_the_42.png">
 			<a href="https:/www.disney.com">
 				<img id="reload" src="resources/reload.png" alt="Start from the beginning" title="Start from the beginning">
 			</a>
@@ -14,8 +14,39 @@
 			</a>
 			<img id="loupe" src="resources/loupe.png">
 		</div>
-		<div id="cluster">
-			<img src="resources/cluster.jpg">
+		<div style="position: relative">
+			<div id="side_left">
+				<img id="left_buttons" src="resources/arrow.png" title="Move" alt="Move">
+				<img id="left_buttons" src="resources/main.png"title="Take" alt="Take">
+				<img id="left_buttons" style="border: 0.3vw solid red; border-radius: 0.3vw;" src="resources/oeil.png" title="Look" alt="Look">
+				<img id="left_buttons" src="resources/outil.png" title="Use" alt="Use">
+				<img id="left_buttons" src="resources/chat-icon.png" title="Speak" alt="Speak">
+			</div>
+			<div id="side_right">
+				<img id="left_buttons" src="resources/book.png" title="Book" alt="Book">
+				<img id="left_buttons" src="resources/towel.png" title="Towel" alt="Towel">
+				<div id="brick_grid" title="Brick" alt="Brick">
+					<img id="brick" src="resources/brick.jpg" title="Brick" alt="Brick">
+					<img id="brick" src="resources/brick.jpg" title="Brick" alt="Brick">
+					<img id="brick" src="resources/brick.jpg" title="Brick" alt="Brick">
+					<img id="brick" src="resources/brick.jpg" title="Brick" alt="Brick">
+					<img id="brick" src="resources/brick.jpg" title="Brick" alt="Brick">
+					<img id="brick" src="resources/brick.jpg" title="Brick" alt="Brick">
+				</div>
+			</div>
+			<div id="cluster">
+				<img src="resources/cluster.jpg"  usemap="#workmap" style="width: 50vw">
+				<map name="workmap">
+					<area shape="rect" coords="934,299,740,446" alt="Computer" href="https://apple.com">
+					<area shape="rect" coords="280,303,441,575" alt="Chair" href="https://www.ikea.com">
+				</map>
+			</div>
+			<div id="text_box">
+				<p>Vous <span id="entrez">entrez</span> albors dans une grande piece remplie d'<span id="text_shadow">ordinateurs</span>...</p>
+				<p style="margin-bottom: 0.25vw"><i>- Bonjour, vous êtes nouveau ici ?</i></p>
+				<input type="text" style="width: 19.5vw; margin-right: 0.25vw;">
+				<input type="submit" value="Repondre" style="width: 3.8vw">
+			</div>
 		</div>
 	</body>
 </html>

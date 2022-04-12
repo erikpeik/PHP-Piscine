@@ -1,15 +1,59 @@
 body {
-	background-color: gray;
+	background-color: rgb(80, 80, 80);
 }
 
 #top_bar {
 	position: relative;
-	width: 90%;
-	height: 200px;
+	width: 80vw;
+	height: 10vh;
 	background:rgb(144, 144, 144);
-	border: 15px solid rgb(144, 144, 144);
-	border-radius: 25px;
-	box-shadow: 15px 15px 15px;
+	border: 0.6vw solid rgb(144, 144, 144);
+	border-radius: 0.6vw;
+	box-shadow: 0.6vw 0.6vw 0.8vw;
+	margin: auto;
+}
+
+#side_left {
+	box-sizing: border-box;
+	float: left;
+	width: 33%;
+	padding: 5px;
+	position: relative;
+	width: 8vw;
+	height: 23vw;
+	transform: translate(14.3vw, 1vw);
+	background:rgb(144, 144, 144);
+	border: 0.6vw solid rgb(144, 144, 144);
+	border-radius: 0.6vw;
+	box-shadow: 0.6vw 0.6vw 0.8vw;
+	margin: auto;
+}
+#side_right {
+	box-sizing: border-box;
+	float: left;
+	padding: 5px;
+	position: relative;
+	width: 8vw;
+	height: 23vw;
+	transform: translate(68.7vw, 1vw);
+	background:rgb(144, 144, 144);
+	border: 0.6vw solid rgb(144, 144, 144);
+	border-radius: 0.6vw;
+	box-shadow: 0.6vw 0.6vw 0.8vw;
+	margin: auto;
+}
+
+#text_box {
+	float: left;
+	padding: 5px;
+	position: relative;
+	width: 25vw;
+	height: 7.5vw;
+	transform: translate(11vw, -2.5vw);
+	background:rgb(166, 251, 150);
+	border: 0.6vw solid rgb(166, 251, 150);
+	border-radius: 0.6vw;
+	box-shadow: 0.6vw 0.6vw 0.8vw;
 	margin: auto;
 }
 
@@ -28,19 +72,49 @@ body {
 }
 
 #loupe {
-	height: 250px;
+	height: 13vh;
 	position: absolute;
 	right: 50px;
-	bottom: -50px;
+	bottom: -3vh;
 }
 
 #cluster {
-	transform: translate(0, 30px);
+	transform: translate(0, 1vw);
 	margin: auto;
-	border: 15px solid rgb(144, 144, 144);
-	box-shadow: 15px 15px 15px;
+	border: 0.6vw solid rgb(144, 144, 144);
+	box-shadow: 0.6vw 0.6vw 0.8vw;
 	background: rgb(144, 144, 144);
-	border-radius: 25px;
-	height: 576px;
-	width: 1024px;
+	border-radius: 0.6vw;
+	width: 50vw;
+}
+
+#left_buttons {
+	width: 4vw;
+	margin-left: 1vw;
+	margin-bottom: 0.4vw;
+}
+
+#brick_grid {
+	float: left;
+	width: 6vw;
+
+}
+#brick {
+	float: left;
+	width: 2vw;
+}
+
+p {
+	margin-top: -0.5vw;
+	font-size: 0.8vw;
+	font-family: Verdana;
+}
+
+#entrez {
+	font-size: 1.9vw;
+	font-family: 'Times New Roman', Times, serif;
+}
+
+#text_shadow {
+	text-shadow: 0.3vw 0.3vw 0.3vw red;
 }
