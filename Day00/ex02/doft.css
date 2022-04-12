@@ -99,13 +99,20 @@ body {
 }
 
 #brick_grid {
+	display: inline;
+	white-space: nowrap;
+	overflow: hidden;
 	float: left;
 	width: 120;
+	height: 72;
 }
 
 #brick {
-	float: left;
-	width: 30;
+	margin-right: -4px;
+	margin-bottom: -4px;
+	overflow: hidden;
+	white-space: nowrap;
+	width: 27%;
 }
 
 p {
