@@ -4,42 +4,56 @@ body {
 
 #top_bar {
 	position: relative;
-	width: 80vw;
-	height: 10vh;
+	transform: translate(0, 12px);
+	width: 1500px;
+	height: 125px;
 	background:rgb(144, 144, 144);
-	border: 0.6vw solid rgb(144, 144, 144);
-	border-radius: 0.6vw;
-	box-shadow: 0.6vw 0.6vw 0.8vw;
+	border: 15px solid rgb(144, 144, 144);
+	border-radius: 15px;
+	box-shadow: 12px 12px 15px;
 	margin: auto;
 }
 
 #side_left {
+	transform: translate(0, 25px);
 	box-sizing: border-box;
 	float: left;
-	width: 33%;
 	padding: 5px;
 	position: relative;
-	width: 8vw;
-	height: 23vw;
-	transform: translate(14.3vw, 1vw);
+	width: 150px;
+	height: 450px;
 	background:rgb(144, 144, 144);
-	border: 0.6vw solid rgb(144, 144, 144);
-	border-radius: 0.6vw;
-	box-shadow: 0.6vw 0.6vw 0.8vw;
+	border: 12px solid rgb(144, 144, 144);
+	border-radius: 15px;
+	box-shadow: 12px 12px 15px;
 	margin: auto;
 }
+
+#cluster {
+	transform: translate(0, 25px);
+	float: left;
+	margin-left: 25px;
+	margin-right: 25px;
+	border: 12px solid rgb(144, 144, 144);
+	box-shadow: 12px 12px 15px;
+	background: rgb(144, 144, 144);
+	border-radius: 15px;
+	width: 1024;
+	height: 576;
+}
+
 #side_right {
+	transform: translate(0, 25px);
 	box-sizing: border-box;
 	float: left;
 	padding: 5px;
 	position: relative;
-	width: 8vw;
-	height: 23vw;
-	transform: translate(68.7vw, 1vw);
+	width: 150px;
+	height: 450px;
 	background:rgb(144, 144, 144);
-	border: 0.6vw solid rgb(144, 144, 144);
-	border-radius: 0.6vw;
-	box-shadow: 0.6vw 0.6vw 0.8vw;
+	border: 12px solid rgb(144, 144, 144);
+	border-radius: 15px;
+	box-shadow: 12px 12px 15px;
 	margin: auto;
 }
 
@@ -47,13 +61,13 @@ body {
 	float: left;
 	padding: 5px;
 	position: relative;
-	width: 25vw;
-	height: 7.5vw;
-	transform: translate(11vw, -2.5vw);
+	width: 500px;
+	height: 150px;
+	transform: translate(-50px, -50px);
 	background:rgb(166, 251, 150);
-	border: 0.6vw solid rgb(166, 251, 150);
-	border-radius: 0.6vw;
-	box-shadow: 0.6vw 0.6vw 0.8vw;
+	border: 15px solid rgb(166, 251, 150);
+	border-radius: 15px;
+	box-shadow: 10px 10px 15px;
 	margin: auto;
 }
 
@@ -61,60 +75,82 @@ body {
 	position: absolute;
 	top: 0;
 	right: 0;
-	width: 35px;
+	width: 23px;
 }
 
 #close {
 	position: absolute;
 	bottom: 0;
 	right: 0;
-	width: 35px;
+	width: 23px;
 }
 
 #loupe {
-	height: 13vh;
+	height: 150px;
 	position: absolute;
-	right: 50px;
-	bottom: -3vh;
-}
-
-#cluster {
-	transform: translate(0, 1vw);
-	margin: auto;
-	border: 0.6vw solid rgb(144, 144, 144);
-	box-shadow: 0.6vw 0.6vw 0.8vw;
-	background: rgb(144, 144, 144);
-	border-radius: 0.6vw;
-	width: 50vw;
+	right: 30px;
+	bottom: -30px;
 }
 
 #left_buttons {
-	width: 4vw;
-	margin-left: 1vw;
-	margin-bottom: 0.4vw;
+	width: 75px;
+	margin-left: 20px;
+	margin-bottom: 7px;
 }
 
 #brick_grid {
 	float: left;
-	width: 6vw;
-
+	width: 120;
 }
+
 #brick {
 	float: left;
-	width: 2vw;
+	width: 30;
 }
 
 p {
-	margin-top: -0.5vw;
-	font-size: 0.8vw;
+	margin-top: -7px;
+	font-size: 16px;
 	font-family: Verdana;
 }
 
 #entrez {
-	font-size: 1.9vw;
+	font-size: 37px;
 	font-family: 'Times New Roman', Times, serif;
 }
 
 #text_shadow {
-	text-shadow: 0.3vw 0.3vw 0.3vw red;
+	text-shadow: 5px 5px 5px red;
 }
+
+#form-text {
+	float: left;
+	width: 385px;
+	height: 25px;
+	border-style: outset;
+}
+
+#form-button {
+	float: left;
+	width: 85px;
+	height: 25px;
+	border-style: outset;
+	background: linear-gradient(white, lightgray);
+	margin-left: 12px;
+}
+
+#form-button:active {
+	width: 85px;
+	height: 25px;
+	border-style: outset;
+	background: linear-gradient(white, lightgray);
+	background: white;
+
+}
+
+#container {
+	margin: auto;
+	width: 1424px;
+	padding: 10px;
+}
+
