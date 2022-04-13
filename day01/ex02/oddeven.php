@@ -5,8 +5,6 @@ $input = fopen('php://stdin', 'r');
 echo "Enter a number: ";
 while ($line = fgets($input))
 {
-	if ($line == NULL)
-		break;
 	$line = trim($line);
 	if (!is_numeric($line))
 		print("'$line' is not a number\n");
@@ -16,6 +14,7 @@ while ($line = fgets($input))
 		print("The number $line is odd\n");
 	echo "Enter a number: ";
 }
+echo "\n";
 fclose($input);
 
 ?>
