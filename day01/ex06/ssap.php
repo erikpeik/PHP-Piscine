@@ -1,19 +1,20 @@
 #!/usr/bin/php
 <?PHP
 
-$counter = 0;
-$result = array();
-foreach ($argv as $arg)
+function ssap($argv)
 {
-	if ($counter != 0)
+	$result = array();
+	for ($i = 1; $argv[$i]; $i++)
 	{
-		$parts = preg_split("/\s+/", $arg);
-		foreach ($parts as $part)
-			array_push($result, $part);
+		$argv[$i] = trim($argv[$i]);
+		$parts = preg_split("/\s+/", $argv[$i]);
+		$result = array_merge($result, $parts);
 	}
-	$counter++;
+	sort($result);
+	return ($result);
 }
-sort($result);
+
+$result = ssap($argv);
 foreach ($result as $word)
 	echo "$word\n";
 ?>
