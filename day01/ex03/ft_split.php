@@ -1,5 +1,5 @@
-
 <?PHP
+
 function ft_split($str)
 {
 	$parts = preg_split("/\s+/", $str);
