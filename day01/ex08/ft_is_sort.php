@@ -4,7 +4,7 @@ function	ft_is_sort($tab)
 {
 	if (!$tab)
 		return (true);
-	$sorted = array_replace([], $tab);
+	$sorted = $tab;
 	sort($sorted);
 	if ($tab === $sorted)
 		return (true);
