@@ -14,52 +14,34 @@ function ssap($argv)
 	return ($result);
 }
 
-function add_alphabetic($arr)
+function	compare($a, $b)
 {
-	$result = array();
-	foreach ($arr as $part)
+	$A = strtolower($a);
+	$B = strtolower($b);
+	$heystack = "abcedfghijklmnopqrstuvwxyz0123456789!\"#$%&'()*+,-./:;<=>?@[\]^_`{|}~";
+	$i = 0;
+	while ($A[$i] || $B[$i])
 	{
-		$a = ord($part);
-		if (ctype_alpha($a))
-			array_push($result, $part);
+		if ($A[$i] == NULL)
+			return (1);
+		if ($B[$i] == NULL)
+			return (-1);
+		$pos1 = strpos($heystack, $A[$i]);
+		$pos2 = strpos($heystack, $B[$i]);
+		if ($pos1 < $pos2)
+			return (-1);
+		if ($pos1 > $pos2)
+			return (1);
+		$i++;
 	}
-	natcasesort($result);
-	return ($result);
-}
-
-function	add_numeric($arr)
-{
-	$result = array();
-	foreach ($arr as $part)
-	{
-		if (is_numeric($part))
-			array_push($result, $part);
-	}
-	asort($result, SORT_STRING);
-	return ($result);
-}
-
-function	add_others($arr)
-{
-	$result = array();
-	foreach ($arr as $part)
-	{
-		$a = ord($part);
-		if (!is_numeric($part) && !ctype_alpha($a))
-			array_push($result, $part);
-	}
-	natcasesort($result);
-	return ($result);
+	return (0);
 }
 
 function	main($argv)
 {
-	$result = array();
 	$words = ssap($argv);
-	$result = array_merge($result, add_alphabetic($words));
-	$result = array_merge($result, add_numeric($words));
-	$result = array_merge($result, add_others($words));
-	foreach ($result as $word)
+ 	usort($words, 'compare');
+	foreach ($words as $word)
 		echo "$word\n";
 }
 
