@@ -16,18 +16,12 @@ function ssap($argv)
 
 function	compare($a, $b)
 {
-	$A = strtolower($a);
-	$B = strtolower($b);
 	$heystack = "abcedfghijklmnopqrstuvwxyz0123456789!\"#$%&'()*+,-./:;<=>?@[\]^_`{|}~";
 	$i = 0;
-	while ($A[$i] || $B[$i])
+	while ($a[$i] || $b[$i])
 	{
-		if ($A[$i] == NULL)
-			return (1);
-		if ($B[$i] == NULL)
-			return (-1);
-		$pos1 = strpos($heystack, $A[$i]);
-		$pos2 = strpos($heystack, $B[$i]);
+		$pos1 = stripos($heystack, $a[$i]);
+		$pos2 = stripos($heystack, $b[$i]);
 		if ($pos1 < $pos2)
 			return (-1);
 		if ($pos1 > $pos2)
