@@ -1,12 +1,9 @@
 #!/usr/bin/php
 <?PHP
 
-$i = 0;
-foreach ($argv as $arg)
+for ($i = 1; $argv[$i]; $i++)
 {
-	if ($i != 0)
-		echo "$arg\n";
-	$i++;
+	echo $argv[$i]."\n";
 }
 
 ?>
