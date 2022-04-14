@@ -1,6 +1,6 @@
 <?PHP
 
-header("Content-type:image/png");
+header("Content-Type: image/png");
 echo readfile("../img/42.png")
 
 ?>
