@@ -2,7 +2,7 @@
 
 foreach($_GET as $key => $value)
 {
-	print $key.": ".$value.PHP_EOL;
+	echo $key.": ".$value.PHP_EOL;
 }
 
 ?>
