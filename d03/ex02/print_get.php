@@ -1,16 +1,8 @@
 <?PHP
 
-$param = $_SERVER['QUERY_STRING'];
-
-for ($i = 0; $param[$i]; $i++)
+foreach($_GET as $key => $value)
 {
-	if ($param[$i] =='&')
-		echo "\n";
-	else if ($param[$i] == "=")
-		echo ": ";
-	else
-		echo $param[$i];
+	print $key.": ".$value.PHP_EOL;
 }
-echo "\n";
 
 ?>
