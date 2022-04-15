@@ -3,7 +3,7 @@
 if ($_GET["action"])
 {
 	$name = $_GET["name"];
-	if ($_GET["action"] == "set")
+	if ($_GET["action"] == "set" && $_GET["name"] && $_GET["value"])
 		setcookie($_GET["name"], $_GET["value"], time() + 3600, '/');
 	if ($_GET["action"] == "del" && $_GET["name"])
 		setcookie($_GET["name"], null, -1, '/');
