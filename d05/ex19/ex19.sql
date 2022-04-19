@@ -1,2 +1,2 @@
-SELECT DATEDIFF(MAX(`date`), MIN(`date`)) AS 'uptime'
+SELECT DATEDIFF(MAX(DATE(`date`)), MIN(DATE(`date`))) AS 'uptime'
 FROM member_history;
