@@ -1,4 +1,4 @@
-SELECT UPPER(last_name) AS 'NAME', first_name, subscription.price
+SELECT UPPER(last_name) AS 'NAME', first_name, price
 FROM member
 INNER JOIN user_card
 ON member.id_user_card = user_card.id_user
