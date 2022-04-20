@@ -1,0 +1,21 @@
+
+<- Vertex ----------------------------------------------------------------------
+The Vertex class handles Vertex. (a point in space)
+
+An instance can be constructed without color: (default color white)
+new Vertex( array( 'x' => 0.0, 'y' => 0.0, 'z' => 0.0 ) )
+
+Or also with a new and disturbing coordinate 'w' as "homogeneous coordinates”.
+By default is worth 1.0:
+new Vertex( array( 'x' => 9.0, 'y' => 9.0, 'z' => 9.0, 'w' => 3.0 ) )
+
+You can also give it Color by using the previous exercise Color class:
+$red = new Color( array( 'rgb' = 0xff0000 ) )
+new Vertex( array( 'x' => 9.0, 'y' => 9.0, 'z' => 9.0, 'w' => 3.0, 'color' => $red ) )
+
+There are also provided magic __get() methods for reading data:
+getX(), getY(), getZ(), getW(), getColor()
+
+And magic __set() methods for writing data to inaccessible properties:
+setX($value), setY($value), setZ($value), setW($value), setColor($value)
+---------------------------------------------------------------------- Vertex ->
