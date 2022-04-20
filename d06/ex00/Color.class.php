@@ -17,7 +17,12 @@ Class Color {
 			$this->green = (int)$color['rgb'] >> 8 & 0xFF;
 			$this->blue = (int)$color['rgb'] & 0xFF;
 		}
-		else if (isset($))
+		else if (isset($color['red']) && isset($color['green']) && isset($color['blue']) )
+		{
+			$this->red = $color['red'];
+			$this->green = $color['green'];
+			$this->blue = $color['blue'];
+		}
 		if (self::$verbose)
 			echo $this." constructed.".PHP_EOL;
 		return ;
