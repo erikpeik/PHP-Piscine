@@ -14,6 +14,9 @@ An instance how it's constructed:
 $dest = new Vertex ( array( 'x' => 1.0, 'y' => 0.0 'z' => 1.0) )
 $vector = new Vector ( array( 'dest' => $dest ) )
 
+If the 'dest' is missing or it doesn't contain an array inside
+its undefined behavior. Look at the examples.
+
 The class provides the following methods :
 
 float	magnitude();
@@ -42,4 +45,10 @@ returns the angle’sAppendix cosine between both vectors.
 
 Vector	crossProduct( Vector $rhs );
 Returns the cross multiplication of both vectors (right-hand mark!)
+
+There are also provided magic __get() methods for reading data:
+getX(), getY(), getZ(), getW(), getColor()
+
+And magic __set() methods for writing data to inaccessible properties:
+setX($value), setY($value), setZ($value), setW($value), setColor($value)
 ---------------------------------------------------------------------- Vector ->

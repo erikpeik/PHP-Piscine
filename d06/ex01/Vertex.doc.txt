@@ -18,4 +18,7 @@ getX(), getY(), getZ(), getW(), getColor()
 
 And magic __set() methods for writing data to inaccessible properties:
 setX($value), setY($value), setZ($value), setW($value), setColor($value)
+
+If array or 'x', 'y', 'z' values inside the array is missing
+its undefined behavior. Follow the examples.
 ---------------------------------------------------------------------- Vertex ->
