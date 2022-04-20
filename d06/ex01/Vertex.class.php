@@ -8,7 +8,7 @@ class Vertex {
 	private	$_z;
 	private	$_w = 1.0;
 	private $_color;
-	public static $verbose = false;
+	public static $verbose = False;
 
 	public function __toString() {
 		$str = sprintf("Vertex( x: %.2f, y: %.2f, z:%.2f, w:%.2f", $this->_x, $this->_y, $this->_z, $this->_w);
@@ -32,7 +32,7 @@ class Vertex {
 			$this->_color = new Color(array('rgb' => 0xffffff));
 		}
 		if (self::$verbose)
-		echo $this." constructed".PHP_EOL;
+			echo $this." constructed".PHP_EOL;
 		return ;
 	}
 
