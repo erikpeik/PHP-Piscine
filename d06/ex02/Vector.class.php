@@ -15,17 +15,16 @@ class Vector {
 	}
 
 	public function	__construct( array $values ) {
-		$this->dest = $values['dest'];
 		if (isset($values['orig'])) {
 			$orig = $values['orig'];
 		} else {
 			$orig = new Vertex( array( 'x' => 0, 'y' => 0, 'z' => 0 ) );
 		}
-		$this->_x = $this->dest->getX() - $orig->getX();
-		$this->_y = $this->dest->getY() - $orig->getY();
-		$this->_z = $this->dest->getZ() - $orig->getZ();
+		$this->_x = $values['dest']->getX() - $orig->getX();
+		$this->_y = $values['dest']->getY() - $orig->getY();
+		$this->_z = $values['dest']->getZ() - $orig->getZ();
 		if (isset($values['w']))
-			$this->setW($values['w']);
+			$this->_w = $values['w'];
 		if (self::$verbose)
 			echo $this." constructed".PHP_EOL;
 		return ;
