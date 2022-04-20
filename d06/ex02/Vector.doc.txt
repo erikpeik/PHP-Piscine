@@ -47,8 +47,5 @@ Vector	crossProduct( Vector $rhs );
 Returns the cross multiplication of both vectors (right-hand mark!)
 
 There are also provided magic __get() methods for reading data:
-getX(), getY(), getZ(), getW(), getColor()
-
-And magic __set() methods for writing data to inaccessible properties:
-setX($value), setY($value), setZ($value), setW($value), setColor($value)
+getX(), getY(), getZ(), getW()
 ---------------------------------------------------------------------- Vector ->

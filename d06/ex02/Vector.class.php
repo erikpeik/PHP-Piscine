@@ -21,9 +21,9 @@ class Vector {
 		} else {
 			$orig = new Vertex( array( 'x' => 0, 'y' => 0, 'z' => 0 ) );
 		}
-		$this->setX($this->dest->getX() - $orig->getX());
-		$this->setY($this->dest->getY() - $orig->getY());
-		$this->setZ($this->dest->getZ() - $orig->getZ());
+		$this->_x = $this->dest->getX() - $orig->getX();
+		$this->_y = $this->dest->getY() - $orig->getY();
+		$this->_z = $this->dest->getZ() - $orig->getZ();
 		if (isset($values['w']))
 			$this->setW($values['w']);
 		if (self::$verbose)
@@ -109,11 +109,6 @@ class Vector {
 	public function getY() { return $this->_y; }
 	public function getZ() { return $this->_z; }
 	public function getW() { return $this->_w; }
-
-	public function setX($value) { $this->_x = $value; }
-	public function setY($value) { $this->_y = $value; }
-	public function setZ($value) { $this->_z = $value; }
-	public function setW($value) { $this->_w = $value; }
 }
 
 ?>
