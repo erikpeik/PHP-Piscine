@@ -1,2 +1,2 @@
-SELECT CEILING(AVG(nb_seats)) AS 'avarage'
+SELECT CEILING(AVG(nb_seats)) AS 'average'
 FROM cinema;
