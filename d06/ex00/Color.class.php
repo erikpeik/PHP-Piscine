@@ -17,9 +17,9 @@ Class Color {
 			$this->blue = intval($color['rgb']) & 0xFF;
 		}
 		else {
-			$this->red = $color['red'];
-			$this->green = $color['green'];
-			$this->blue = $color['blue'];
+			$this->red = intval($color['red']);
+			$this->green = intval($color['green']);
+			$this->blue = intval($color['blue']);
 		}
 		if (self::$verbose)
 			echo $this." constructed.".PHP_EOL;

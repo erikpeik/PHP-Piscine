@@ -37,7 +37,8 @@ class Vector {
 	}
 
 	public function magnitude() {
-		return sqrt(pow($this->getX(), 2) + pow($this->getY(), 2) + pow($this->getZ(), 2));
+		return floatval(sqrt(pow($this->getX(), 2)
+		+ pow($this->getY(), 2) + pow($this->getZ(), 2)));
 	}
 
 	public function	normalize() {
@@ -82,13 +83,14 @@ class Vector {
 	}
 
 	public function	dotProduct( Vector $rhs ) {
-		return ($this->getX() * $rhs->getX()) + ($this->getY() * $rhs->getY()) + ($this->getZ() * $rhs->getZ());
+		return floatval(($this->getX() * $rhs->getX())
+			+ ($this->getY() * $rhs->getY()) + ($this->getZ() * $rhs->getZ()));
 	}
 
 	public function cos( Vector $rhs ) {
 		$dot_product = $this->dotProduct($rhs);
 		$magnitudes = $this->magnitude() * $rhs->magnitude();
-		return ($dot_product / $magnitudes);
+		return floatval($dot_product / $magnitudes);
 	}
 
 	public function crossProduct( Vector $rhs ) {
