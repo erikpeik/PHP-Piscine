@@ -18,12 +18,19 @@ class UnholyFactory {
 		foreach ($this->_soldiers as $key) {
 			if ($key == $rf) {
 				echo "(Factory fabricates a fighter of type ".$rf.")".PHP_EOL;
-				return $rt;
+				return $rf;
 			}
 		}
 		echo "(Factory hasn't absorbed any fighter of type ".$rf.")".PHP_EOL;
 		return null;
 	}
+
+/* 	public function	fight() {
+		foreach ($this->_soldiers as $soldier) {
+			if (method_exists($soldier, 'fight'))
+				$soldier->fight();
+		}
+	} */
 }
 
 ?>
