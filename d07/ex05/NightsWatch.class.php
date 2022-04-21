@@ -9,7 +9,8 @@ class NightsWatch {
 
 	public function fight() {
 		foreach ($this->_array as $person) {
-			if (method_exists($person,'fight'))
+			if ($person instanceof IFighter
+				&& method_exists($person,'fight'))
 				$person->fight();
 		}
 	}
