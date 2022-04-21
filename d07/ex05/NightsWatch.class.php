@@ -1,14 +1,14 @@
 <?PHP
 
 class NightsWatch {
-	private $array = [];
+	private $_array = array();
 
 	public function recruit($person) {
-		$this->array[] = $person;
+		$this->_array[] = $person;
 	}
 
 	public function fight() {
-		foreach ($this->array as $person) {
+		foreach ($this->_array as $person) {
 			if (method_exists($person,'fight'))
 				$person->fight();
 		}
