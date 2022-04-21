@@ -1,4 +1,4 @@
-<?php
+<?PHP
 
 Class Tyrion extends Lannister {
 	public function __construct() {
