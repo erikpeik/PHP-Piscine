@@ -1,15 +1,14 @@
 <?PHP
 
 class Fighter {
-	public $type;
+	private $_type;
 
-	abstract function fight($target);
 	public function __construct($type) {
-		$this->type = $type;
+		$this->_type = $type;
 	}
 
 	public function	__toString() {
-		return $this->type;
+		return $this->_type;
 	}
 }
 

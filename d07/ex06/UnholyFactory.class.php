@@ -15,22 +15,22 @@ class UnholyFactory {
 	}
 
 	public function fabricate($rf) {
-		foreach ($this->_soldiers as $key) {
-			if ($key == $rf) {
+		foreach ($this->_soldiers as $soldier) {
+			if ($soldier == $rf) {
 				echo "(Factory fabricates a fighter of type ".$rf.")".PHP_EOL;
-				return $rf;
+				return $soldier;
 			}
 		}
 		echo "(Factory hasn't absorbed any fighter of type ".$rf.")".PHP_EOL;
 		return null;
 	}
 
-/* 	public function	fight() {
+ 	public function	fight() {
 		foreach ($this->_soldiers as $soldier) {
 			if (method_exists($soldier, 'fight'))
 				$soldier->fight();
 		}
-	} */
+	}
 }
 
 ?>
