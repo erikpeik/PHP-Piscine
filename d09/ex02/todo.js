@@ -5,7 +5,6 @@ function	add_element() {
 	}
 	var ft_list = document.getElementById('ft_list');
 	var element = document.createElement('div');
-	document.cookie = ft_list;
 	element.appendChild(document.createTextNode(input));
 	ft_list.prepend(element);
 	document.cookie = input + '=' + input;
