@@ -11,9 +11,9 @@
 				alert("Please, use me...");
 			}, 30000);
 			function validateForm() {
-				var left = parseInt(document.forms["calc"]["left"].value);
-				var operator = document.forms["calc"]["operator"].value;
-				var right = parseInt(document.forms["calc"]["right"].value);
+				var left = parseInt(document.getElementById('left').value);
+				var operator = document.getElementById('operator').value;
+				var right = parseInt(document.getElementById('right').value);
 				if (Number.isInteger(left) == false || Number.isInteger(right) == false) {
 					alert('Error :(');
 					return ;
@@ -24,7 +24,7 @@
 				}
 				if ((operator == '/' || operator == '%') && right == 0) {
 					alert("It's over 9000!");
-					console.log("It's over 9000!");
+					console.log(left + " " + operator + " " + right + " = " + result);
 					return ;
 				}
 				if (operator == '+') {
@@ -55,17 +55,15 @@
 				return ;
 			}
 		</script>
-		<form id="calc" method="POST" onsubmit="return false;">
-			<input type="text" name="left">
-			<select id="operator" name="operator" form="calc">
-				<option value="+">+</option>
-				<option value="-">-</option>
-				<option value="*">*</option>
-				<option value="/">/</option>
-				<option value="%">%</option>
-			</select>
-			<input type="text" name="right">
-			<input type="submit" name="submit" value="Try me!" onclick="validateForm()">
-		</form>
+		<input type="text" id="left">
+		<select id="operator" id="operator">
+			<option value="+">+</option>
+			<option value="-">-</option>
+			<option value="*">*</option>
+			<option value="/">/</option>
+			<option value="%">%</option>
+		</select>
+		<input type="text" id="right">
+		<input type="submit" name="submit" value="Try me!" onclick="validateForm()">
 	</body>
 </html>
