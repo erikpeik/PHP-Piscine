@@ -1,0 +1,71 @@
+<html>
+	<head>
+		<title>It's over 9000</title>
+		<style>
+
+		</style>
+	</head>
+	<body>
+		<script>
+			setInterval(function(){
+				alert("Please, use me...");
+			}, 30000);
+			function validateForm() {
+				var left = parseInt(document.forms["calc"]["left"].value);
+				var operator = document.forms["calc"]["operator"].value;
+				var right = parseInt(document.forms["calc"]["right"].value);
+				if (Number.isInteger(left) == false || Number.isInteger(right) == false) {
+					alert('Error :(');
+					return ;
+				}
+				if (right < 0 || left < 0) {
+					alert('Error :(');
+					return ;
+				}
+				if ((operator == '/' || operator == '%') && right == 0) {
+					alert("It's over 9000!");
+					console.log("It's over 9000!");
+					return ;
+				}
+				if (operator == '+') {
+					var result = left + right;
+					console.log(left + " " + operator + " " + right + " = " + result);
+					alert(left + " " + operator + " " + right + " = " + result);
+				}
+				else if (operator == '-') {
+					var result = left - right;
+					console.log(left + " " + operator + " " + right + " = " + result);
+					alert(left + " " + operator + " " + right + " = " + result);
+				}
+				else if (operator == '*') {
+					var result = left * right;
+					console.log(left + " " + operator + " " + right + " = " + result);
+					alert(left + " " + operator + " " + right + " = " + result);
+				}
+				else if (operator == '/') {
+					var result = left / right;
+					console.log(left + " " + operator + " " + right + " = " + result);
+					alert(left + " " + operator + " " + right + " = " + result);
+				}
+				else if (operator == '%') {
+					var result = left % right;
+					console.log(left + " " + operator + " " + right + " = " + result);
+					alert(left + " " + operator + " " + right + " = " + result);
+				}
+				return ;
+			}
+		</script>
+		<form id="calc" method="POST" onsubmit="return false;">
+			<input type="text" name="left">
+			<select id="operator" name="operator" form="calc">
+				<option value="+">+</option>
+				<option value="-">-</option>
+				<option value="*">*</option>
+				<option value="/">/</option>
+				<option value="%">%</option>
+			</select>
+			<input type="text" name="right">
+			<input type="submit" name="submit" value="Try me!" onclick="validateForm()">
+		</form>
+	</body>
+</html>
