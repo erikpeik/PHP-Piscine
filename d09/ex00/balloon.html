@@ -1,7 +1,7 @@
 <html>
 	<head>
 		<style>
-			.balloon {
+			#balloon {
 				width: 200px;
 				height: 200px;
 				border-radius: 50%;
@@ -9,16 +9,17 @@
 				top: 50%;
 				left: 50%;
 				position: absolute;
-				margin: -100px 0 0 -100px;
+				transform: translate(-50%, -50%);
 			}
 		</style>
 	</head>
 		<script>
-			var balloon = document.getElementById("balloon");
-			function Hover() {
-				balloon.style.transform = "scale()";
+			function clicker() {
+				var balloon = document.getElementById("balloon");
+
+				balloon.style.height = "500px";
 			}
 		</script>
-		<div class="balloon" id="balloon" onmouseover="Hover()"></div>
+		<div id="balloon" style="height: 200px" onclick="clicker()"></div>
 	</body>
 </html>
