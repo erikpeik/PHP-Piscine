@@ -28,7 +28,7 @@
 				height: 30px;
 			}
 		</style>
-		<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+		<script src="//code.jquery.com/jquery-3.6.0.min.js"></script>
 		<script>
 			$(document).ready(function () {
 				$.fn.calc_result = function(left, operator, right) {
@@ -46,19 +46,19 @@
 					return result;
 				}
 				$('#submit').click(function() {
-					var left = $('#left').val();
+					var left = +$('#left').val();
 					var operator = $('#operator').val();
-					var right = $('#right').val();
- 					if (/^[0-9]+$/.test(left) == false || /^[0-9]+$/.test(right) == false) {
-						alert('Error :(');
+					var right = +$('#right').val();
+ 					if (!$.isNumeric(left) || !$.isNumeric(right)
+						|| !$.trim($('#left').val()) || !$.trim($('#right').val())
+						|| !(/^[0-9]+$/.test(left)) || !(/^[0-9]+$/.test(right))) {
+						alert("Error :(");
 						return ;
 					} if ((operator == '/' || operator == '%') && right == 0) {
 						alert("It's over 9000!");
-						console.log(left + " " + operator + " " + right + " = " + result);
+						console.log("It's over 9000!");
 						return ;
 					}
-					var left = parseInt(left);
-					var right = parseInt(right);
 					result = $.fn.calc_result(left, operator, right);
 					alert(left + " " + operator + " " + right + " = " + result);
 					console.log(left + " " + operator + " " + right + " = " + result);
