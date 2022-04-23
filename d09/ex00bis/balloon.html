@@ -10,46 +10,42 @@
 				transform: translate(-50%, -50%);
 			}
 		</style>
-	</head>
+		<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 		<script>
-			var clicked = false;
-			function change_color() {
-				var balloon = document.getElementById("balloon");
-				if (balloon.style.backgroundColor == "red") {
-					balloon.style.backgroundColor = "green";
-				} else if (balloon.style.backgroundColor == "green") {
-					balloon.style.backgroundColor = "blue";
-				} else if (balloon.style.backgroundColor == "blue") {
-					balloon.style.backgroundColor = "red";
-				}
-			}
-			function grow() {
-				clicked = true;
-				var balloon = document.getElementById("balloon");
-				var size = balloon.offsetHeight;
-				balloon.style.height = (size + 10) + "px";
-				balloon.style.width = (size + 10) + "px";
-				if (balloon.offsetHeight > 420) {
-					balloon.style.height = "200px";
-					balloon.style.width = "200px";
-					balloon.style.backgroundColor = "red";
-				} else {
-					change_color();
-				}
-			}
-			function shrink() {
-				if (clicked == false) {
-					var balloon = document.getElementById("balloon");
-					var size = balloon.offsetHeight;
-					if (balloon.offsetHeight > 200) {
-						balloon.style.height = (size - 5) + "px";
-						balloon.style.width = (size - 5) + "px";
-						change_color();
+			$(document).ready(function () {
+				var colors = Array('red', 'green', 'blue');
+				var count = 0;
+				var clicked = false;
+				$('#balloon').click(function () {
+					var size = $('#balloon').width() + 10;
+					if (size <= 420) {
+						$('#balloon').height(size);
+						$('#balloon').width(size);
+						count += 1;
+					} else {
+						$('#balloon').height(200);
+						$('#balloon').width(200);
+						count = 0;
 					}
+					$('#balloon').css('background-color', colors[count % 3]);
+					clicked = true;
+				});
+				$('#balloon').mouseleave(function () {
+					var size = $('#balloon').width();
+					if (size > 200 && clicked == false) {
+						if (count == 0)
+							count = 3;
+						$('#balloon').height(size - 5);
+						$('#balloon').width(size - 5);
+						count -= 1;
+					}
+					$('#balloon').css('background-color', colors[count % 3]);
+					clicked = false;
+				})
 				}
-				clicked = false;
-			}
+			);
 		</script>
-		<div id="balloon" style="height: 200px; width: 200px; background-color: red;" onmousedown="grow()" onmouseleave="shrink()"></div>
+	</head>
+		<div id="balloon" style="height: 200px; width: 200px; background-color: red;"></div>
 	</body>
 </html>
