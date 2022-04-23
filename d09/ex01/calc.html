@@ -34,30 +34,8 @@
 			setInterval(function(){
 				alert("Please, use me...");
 			}, 30000);
-			function validateForm() {
-				var left_string = document.getElementById('left').value;
-				var right_string = document.getElementById('right').value;
-				var operator = document.getElementById('operator').value;
-				var left = parseInt(document.getElementById('left').value);
-				var right = parseInt(document.getElementById('right').value);
 
-				if (isNaN(left_string) || isNaN(right_string)) {
-					alert('Error :(');
-					return ;
-				} if (/[.,]/.test(left_string) || /[.,]/.test(right_string)) {
-					alert('Error :(');
-					return ;
-				} if (Number.isInteger(left) == false || Number.isInteger(right) == false) {
-					alert('Error :(');
-					return ;
-				} if (right < 0 || left < 0) {
-					alert('Error :(');
-					return ;
-				} if ((operator == '/' || operator == '%') && right == 0) {
-					alert("It's over 9000!");
-					console.log("It's over 9000!");
-					return ;
-				}
+			function calc_result(left, operator, right) {
 				if (operator == '+') {
 					var result = left + right;
 				} else if (operator == '-') {
@@ -68,6 +46,26 @@
 					var result = left / right;
 				} else if (operator == '%') {
 					var result = left % right;
+				}
+				return result;
+			}
+
+			function validateForm() {
+				var left = document.getElementById('left').value;
+				var right = document.getElementById('right').value;
+				var operator = document.getElementById('operator').value;
+
+				if (/^[0-9]+$/.test(left) == false || /^[0-9]+$/.test(right) == false) {
+					alert('Error :(');
+					return ;
+				}
+				left = parseInt(left);
+				right = parseInt(right);
+				result = calc_result(left, operator, right);
+				if ((operator == '/' || operator == '%') && right == 0) {
+					alert("It's over 9000!");
+					console.log("It's over 9000!");
+					return ;
 				}
 				console.log(left + " " + operator + " " + right + " = " + result);
 				alert(left + " " + operator + " " + right + " = " + result);
