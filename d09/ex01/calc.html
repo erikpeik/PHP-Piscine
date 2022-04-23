@@ -11,9 +11,16 @@
 				alert("Please, use me...");
 			}, 30000);
 			function validateForm() {
-				var left = parseInt(document.getElementById('left').value);
+				var left_string = document.getElementById('left').value;
+				var right_string = document.getElementById('right').value;
 				var operator = document.getElementById('operator').value;
+				var left = parseInt(document.getElementById('left').value);
 				var right = parseInt(document.getElementById('right').value);
+
+				if (isNaN(left_string) || isNaN(right_string)) {
+					alert('Error :(');
+					return ;
+				}
 				if (Number.isInteger(left) == false || Number.isInteger(right) == false) {
 					alert('Error :(');
 					return ;
