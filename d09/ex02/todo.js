@@ -15,7 +15,8 @@ window.onload = function() {
 	for (var i = 0; i < cookies.length; i++) {
 		var name = cookies[i].substring(0, cookies[i].indexOf('='));
 		var value = cookies[i].substring(cookies[i].indexOf('=') + 1);
-		add_element(name, value);
+		if (name && value)
+			add_element(name, value);
 	}
 }
 
@@ -23,20 +24,20 @@ function	add_element(date_id, input) {
 
 	var ft_list = document.getElementById('ft_list');
 	var element = document.createElement('div');
+	element.setAttribute("class", "element");
 	element.appendChild(document.createTextNode(input));
-	ft_list.prepend(element);
 	element.addEventListener('click', function remove_it() {
 		if (window.confirm("Do you really want to remove this Element?")) {
 			ft_list.removeChild(element);
 			removeCookie(date_id, input);
 		}
 	});
-
+	ft_list.prepend(element);
 }
 
 function new_prompt() {
 	var input = prompt("New TO-DO", "");
-	if (input == null || input == '') {
+	if (input == null || input == '' || input.trim().length == 0) {
 		return false;
 	} else {
 		date_id = Date.now();
