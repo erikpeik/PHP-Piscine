@@ -54,7 +54,6 @@ $(document).ready(function () {
 		} else {
 			date_id = Date.now();
 			$.fn.add_element(date_id, input, true);
-			/* $.fn.setCookie(date_id, input, 1); */
 		}
 	});
 
