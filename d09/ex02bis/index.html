@@ -1,0 +1,56 @@
+<html>
+	<head>
+		<title>To do or not to do</title>
+		<script src="//code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script src="todo.js"></script>
+		<style>
+			#ft_list {
+				width: 420px;
+			}
+			#element {
+				width: 380px;
+				padding: 10px;
+				border-radius: 15px;
+				background-color: #dddddd;
+				box-shadow: 0px 0px 20px #fc5000;
+				text-align: center;
+				vertical-align: middle;
+				margin: 10px;
+				color: rgb(59, 59, 59);;
+			}
+			.container {
+				border: 1px solid 1px;
+ 				margin-top: 20px;
+				padding: 20px;
+				border-radius: 20px;
+				width: 420px;
+				left: 50%;
+				position: absolute;
+				transform: translate(-50%);
+				background-color: #FC814A;
+			}
+			button {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				width: 100px;
+				height: 30px;
+			}
+			h1 {
+				text-align: center;
+				color: rgb(59, 59, 59);
+			}
+			body {
+				font-family: Arial, sans-serif;
+				background-color: #E8E8E8;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<h1>To do or not to do</h1>
+			<button name="New" id="New" src="todo.js">New</button>
+			<div id="ft_list"></div>
+		</div>
+	</body>
+</html>
