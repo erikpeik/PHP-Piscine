@@ -20,6 +20,7 @@ $(document).ready(function () {
 		});
 		$("#ft_list").prepend($div);
 	}
+	
 	$('#New').click(function() {
 		var input = prompt("New TO-DO", "");
 		if (!$.trim(input)) {
@@ -29,9 +30,6 @@ $(document).ready(function () {
 			$.fn.add_element(date_id, input);
 			$.fn.setCookie(date_id, input, 1);
 		}
-	});
-	$('#element').click(function() {
-		alert('clicked');
 	});
 
 	var cookies = document.cookie.split(';');
