@@ -2,7 +2,31 @@
 	<head>
 		<title>It's over 9000</title>
 		<style>
-
+			body {
+				background-color: gainsboro;
+			}
+			h1 {
+				font-family: Arial, sans-serif;
+				text-align: center;
+				color: white;
+			}
+			.calculator {
+				background-color: rgb(171, 171, 171);
+				width: 420px;
+				height: 300px;
+				top: 50%;
+				left: 50%;
+				position: absolute;
+				transform: translate(-50%, -50%);
+				border: 5px solid rgb(63, 63, 63);
+				border-radius: 25px;
+			}
+			.button {
+				margin-left: 10px;
+				left: 50%;
+				width: 400px;
+				height: 30px;
+			}
 		</style>
 	</head>
 	<body>
@@ -62,15 +86,18 @@
 				return ;
 			}
 		</script>
-		<input type="text" id="left">
-		<select id="operator" id="operator">
-			<option value="+">+</option>
-			<option value="-">-</option>
-			<option value="*">*</option>
-			<option value="/">/</option>
-			<option value="%">%</option>
-		</select>
-		<input type="text" id="right">
-		<input type="submit" name="submit" value="Try me!" onclick="validateForm()">
+		<div class="calculator">
+			<h1>Calculator</h1>
+			<input type="text" id="left" class="button">
+			<select id="operator" id="operator" class="button">
+				<option value="+">+</option>
+				<option value="-">-</option>
+				<option value="*">*</option>
+				<option value="/">/</option>
+				<option value="%">%</option>
+			</select>
+			<input type="text" id="right" class="button">
+			<input type="submit" name="submit" value="Try me!" onclick="validateForm()" class="button">
+		</div>
 	</body>
 </html>
