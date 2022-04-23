@@ -44,45 +44,33 @@
 				if (isNaN(left_string) || isNaN(right_string)) {
 					alert('Error :(');
 					return ;
-				}
-				if (Number.isInteger(left) == false || Number.isInteger(right) == false) {
+				} if (/[.,]/.test(left_string) || /[.,]/.test(right_string)) {
 					alert('Error :(');
 					return ;
-				}
-				if (right < 0 || left < 0) {
+				} if (Number.isInteger(left) == false || Number.isInteger(right) == false) {
 					alert('Error :(');
 					return ;
-				}
-				if ((operator == '/' || operator == '%') && right == 0) {
+				} if (right < 0 || left < 0) {
+					alert('Error :(');
+					return ;
+				} if ((operator == '/' || operator == '%') && right == 0) {
 					alert("It's over 9000!");
-					console.log(left + " " + operator + " " + right + " = " + result);
+					console.log("It's over 9000!");
 					return ;
 				}
 				if (operator == '+') {
 					var result = left + right;
-					console.log(left + " " + operator + " " + right + " = " + result);
-					alert(left + " " + operator + " " + right + " = " + result);
-				}
-				else if (operator == '-') {
+				} else if (operator == '-') {
 					var result = left - right;
-					console.log(left + " " + operator + " " + right + " = " + result);
-					alert(left + " " + operator + " " + right + " = " + result);
-				}
-				else if (operator == '*') {
+				} else if (operator == '*') {
 					var result = left * right;
-					console.log(left + " " + operator + " " + right + " = " + result);
-					alert(left + " " + operator + " " + right + " = " + result);
-				}
-				else if (operator == '/') {
+				} else if (operator == '/') {
 					var result = left / right;
-					console.log(left + " " + operator + " " + right + " = " + result);
-					alert(left + " " + operator + " " + right + " = " + result);
-				}
-				else if (operator == '%') {
+				} else if (operator == '%') {
 					var result = left % right;
-					console.log(left + " " + operator + " " + right + " = " + result);
-					alert(left + " " + operator + " " + right + " = " + result);
 				}
+				console.log(left + " " + operator + " " + right + " = " + result);
+				alert(left + " " + operator + " " + right + " = " + result);
 				return ;
 			}
 		</script>
