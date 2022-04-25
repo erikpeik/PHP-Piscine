@@ -1,0 +1,27 @@
+body {
+	font-family: Helvetica, sans-serif;
+	background-color: #1A1A1D;
+	color: white;
+}
+
+.row {
+	flex: 1;
+}
+
+.row:first-child {
+	margin-right: 20px;
+}
+
+.input {
+	position: relative;
+	width: 100%;
+	font-size: 1.6vw;
+	margin-top: 0.5vw;
+	margin-bottom: 0.5vw;
+}
+
+.container {
+	margin: 1vw;
+	display: flex;
+}
+
